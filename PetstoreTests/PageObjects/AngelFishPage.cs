@@ -4,14 +4,14 @@
     {
         private readonly By header = By.XPath("//h2[text()='Angelfish']");
         private readonly By largeAngelfishLine = By.XPath("//td/a[text()='EST-1']");
-        public readonly By item1 = By.XPath("(//a[contains(text(),'Add to Cart')])[1]");
+        public readonly By item = By.XPath("(//a[contains(text(),'Add to Cart')])["+TestSettings.itemNumber+"]");
 
         public AngelFishPage(IWebDriver webDriver) : base(webDriver)
         {
 
         }
 
-        public ShoppingCartPage AddToShoppingCart(By item)
+        public ShoppingCartPage AddToShoppingCart()
         {
             var webDriverWait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
             webDriverWait.Until(ExpectedConditions.ElementIsVisible(item)).Click();

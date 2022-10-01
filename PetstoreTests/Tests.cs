@@ -41,7 +41,8 @@
         public void AddToShoppingCartAssert()
         {
             var angelFishPage = new AngelFishPage(webDriver);
-            Assert.NotNull(angelFishPage.AddToShoppingCart(angelFishPage.item1));
+            var shoppingCartPage = angelFishPage.AddToShoppingCart();
+            Assert.IsTrue(shoppingCartPage.CheckElements());
         }
     }
 }

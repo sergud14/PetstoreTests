@@ -36,7 +36,22 @@ namespace PetstoreTests
             return result;
         }
 
+        //public virtual bool CheckElements(List<By> elements)
+        //{
+        //    WebDriverWait webDriverWait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(15));
+        //    bool result = false;
+        //    int i = 0;
 
+        //    foreach (var element in elements)
+        //    {
+        //      if (webDriverWait.Until(ExpectedConditions.ElementIsVisible(element)) != null)
+        //      {  
+        //       i++;
+        //      }
+        //    }
 
+        //    if (i == 0) result = true;
+        //    return result;
+        //}
     }
 }
